@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+
+    "noImplicitAny": false, // разрешить неявный any
+    "strictNullChecks": false, // отключить строгую проверку на null
+
+
+    /* Основное */
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "app/*": ["src/app/*"],
+      "entities/*": ["src/entities/*"],
+      "features/*": ["src/features/*"],
+      "pages/*": ["src/pages/*"],
+      "shared/*": ["src/shared/*"],
+      "widgets/*": ["src/widgets/*"]
+    },
+    /* Фичи */
+    "allowJs": true,
+    "checkJs": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    
+    /* Компиляция */
+    "noEmit": true,
+    "outDir": "dist",
+
+    /* Поддержка импорта */
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

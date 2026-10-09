@@ -1,0 +1,11 @@
+export { AdminPage } from "./ui/AdminPage";
+export { CategoriesAdminPage } from "./ui/categories/CategoriesAdminPage";
+export { CategoryFormPage } from "./ui/categories/CategoryFormPage";
+export { ArtworksAdminPage } from "./ui/artworks/ArtworksAdminPage";
+export { ArtworkFormPage } from "./ui/artworks/ArtworkFormPage";
+export { ExhibitionsAdminPage } from "./ui/exhibitions/ExhibitionsAdminPage";
+export { ExhibitionFormPage } from "./ui/exhibitions/ExhibitionFormPage";
+export { PublicationsAdminPage } from "./ui/publications/PublicationsAdminPage";
+export { PublicationFormPage } from "./ui/publications/PublicationFormPage";
+export { VideosAdminPage } from "./ui/videos/VideosAdminPage";
+export { VideoFormPage } from "./ui/videos/VideoFormPage";
