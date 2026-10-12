@@ -4,6 +4,11 @@ import { urls } from "shared/api/urls";
 import type { AdminEntity, FieldErrors } from "../model/types";
 
 const authKey = "admin-auth";
+const createFileId = () =>
+  typeof crypto.randomUUID === "function"
+    ? crypto.randomUUID()
+    : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+
 export const getAdminAuth = () => sessionStorage.getItem(authKey) ?? "";
 export const setAdminAuth = (value: string) =>
   sessionStorage.setItem(authKey, value);
@@ -49,7 +54,7 @@ export const adminApi = {
   uploadFiles: async (service: AdminEntity, files: File[]) => {
     const names = files.map(
       (file) =>
-        `${crypto.randomUUID()}-${file.name.replace(/[^a-zA-Z0-9._-]/g, "-")}`,
+        `${createFileId()}-${file.name.replace(/[^a-zA-Z0-9._-]/g, "-")}`,
     );
     const response = await axios.post<
       Array<{ url: string; object_name: string }>
